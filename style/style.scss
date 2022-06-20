@@ -29,6 +29,12 @@ body {
         background-color: $color-gray-x-weight;
         padding: 0.6em 1.8em;
         border-radius: 0.8em;
+        &:hover,:focus {
+          cursor: pointer;
+          box-shadow: -3px -3px 10px $color-red-shadow,
+           3px 3px 10px $color-red-shadow;
+         transform:scale(1.1);
+        }
         h2 {
           margin: 0;
           color: $color-gray-xx-weight;
@@ -76,6 +82,12 @@ body {
           border-radius: 5px;
           background-color: $color-gray-positive-button;
           color: $color-gray-text-button;
+          &:hover,:focus {
+            cursor: pointer;
+            box-shadow: -2px -2px 5px $color-purple-shadow,
+             2px 2px 5px $color-purple-shadow;
+           transform:scale(1.1);
+          }
         }
       }
     }
@@ -87,7 +99,7 @@ body {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    display: flex;
+    // display: flex;
     justify-content: center;
     align-items: center;
     form {
@@ -102,6 +114,8 @@ body {
       background-color: $color-gray-light;
       width: min(90%, 400px);
       border-radius: 2em;
+      // transform: translate(-50%, -50%) scale(0);
+      // transition: 200ms ease-in-out;
       div {
         display: flex;
         width: 100%;
@@ -135,6 +149,12 @@ body {
         background-color: $color-gray-x-weight;
         border-radius: 0.4em;
         color: $color-gray-xx-weight;
+        &:hover,:focus {
+          cursor: pointer;
+          box-shadow: -2px -2px 5px $color-green-shadow,
+           2px 2px 5px $color-green-shadow;
+         transform:scale(1.1);
+        }
       }
       input{
         width: min(80%, 300px);
@@ -151,6 +171,7 @@ body {
     }
   }
   .overall {
+    display: none;
     position: absolute;
     width: 100vw;
     height: 100vh;
