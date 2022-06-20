@@ -1,37 +1,159 @@
 @import "color";
+@import 'font';
 
 body {
-  background-color: rgba(234, 234, 234, 1);
+  background-color: $color-gray-weight;
   margin: 0;
+  width: 100vw;
   header {
-    background-color: rgba(234, 234, 234, 1);
-    box-shadow: 0px 4px 13px #cacaca;
+    background-color: $color-gray-weight;
+    box-shadow: 0px 4px 13px $color-gray-shadow;
     display: flex;
     justify-content: center;
     .container-header {
         display: flex;
         align-items: baseline;
         justify-content: space-around;
+        flex-wrap: wrap;
         width: 1500px;
         padding: 4em 0em;
-        // border: 1px solid red;
       h1 {
         margin: 0;
-        font-family:'Oxygen', sans-serif;
+        font-family: $font-family-oxygen;
+        font-weight: $size-font-bold;
         font-size: 3rem;
-        color: rgb(105, 105, 105);
+        color: $color-gray-xx-weight;
       }
 
       div {
-        background-color: rgba(222, 222, 222, 1);
+        background-color: $color-gray-x-weight;
         padding: 0.6em 1.8em;
         border-radius: 0.8em;
         h2 {
-            
           margin: 0;
-          color: rgb(105, 105, 105);
+          color: $color-gray-xx-weight;
+          font-family: $font-family-oxygen;
+          font-weight: $size-font-bold;
+          font-size: 1.8rem;
         }
       }
     }
+  }
+
+  .main-container {
+    display: flex;
+    justify-content: center;
+    main {
+      width: 1400px;
+      // border: 1px solid red;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15em , 1fr));
+      gap: 5em;
+      justify-items: center;
+      padding: 3em 0em;
+      .container-piece{
+        width: fit-content;
+        background-color: $color-gray-light;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        padding: 2em 3em;
+        border-radius: 2.2em;
+        box-shadow: -5px -5px 13px $color-gray-shadow,
+         5px 5px 13px $color-gray-shadow;
+        p{
+          margin: 0;
+          font-family: $font-family-oxygen;
+          font-weight: $size-font-regular;
+          color: $color-gray-text;
+          font-size: 1.5rem;
+        }
+        button {
+          border: none;
+          font-size: 1.5rem;
+          padding: 0.3em 1em;
+          border-radius: 5px;
+          background-color: $color-gray-positive-button;
+          color: $color-gray-text-button;
+        }
+      }
+    }
+  }
+
+
+  .container-form {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form {
+      display: none;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.7em;
+      padding: 2em 0em;
+      background-color: $color-gray-light;
+      width: min(90%, 400px);
+      border-radius: 2em;
+      div {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        p{
+          margin: 0;
+        }
+        .checkbox {
+          width: 8%;
+          height: 20px;
+        }
+      }
+
+      p{
+        margin: 0;
+        font-family: $font-family-oxygen;
+        color: $color-gray-xx-weight;
+      }
+
+      .head {
+        font-size: 1.5rem;
+        font-weight: $size-font-bold;
+      }
+      button {
+        border: 0;
+        font-family: $font-family-oxygen;
+        font-weight: $size-font-bold;
+        font-size: 1.5rem;
+        padding: 0.3em 1em;
+        background-color: $color-gray-x-weight;
+        border-radius: 0.4em;
+        color: $color-gray-xx-weight;
+      }
+      input{
+        width: min(80%, 300px);
+        border: none;
+        border-radius: 0.5em;
+        height: 45px;
+        font-family: $font-family-oxygen;
+        font-weight: $size-font-regular;
+        font-size: 1.1rem;
+        padding-left: 0.5em;
+        box-sizing: border-box;
+        background-color: $color-gray-x-weight;
+      }
+    }
+  }
+  .overall {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, 0.15);
   }
 }
