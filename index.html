@@ -6,20 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/style/style.css">
-    <script src="/app.js" defer></script>
 </head>
 <body class="body">
     <div class="container-form">
-        <form class="form" action="#">
+        <form class="form" action="/" method="get">
             <p class="head">Add new book</p>
-             <input type="text" name="book-title" placeholder="title" id="title" value="">
-             <input type="text" name="book-author" id="author" placeholder="author">
-             <input type="number" name="book-page" id="page" placeholder="page">
+             <input type="text" name="book-title" placeholder="title"  class="title" required>
+             <input type="text" name="book-author" class="author"  placeholder="author" required>
+             <input type="number" name="book-page" class="page"  placeholder="page" required>
              <div>
                 <p>Have you read it?</p>
-                <input class="checkbox" type="checkbox" name="checkbox" id="checkbox">
+                <input class="checkbox" type="checkbox" name="checkbox" id="checkbox" >
              </div>
-             <button type="submit">Submit</button>
+             <button class="submit" type="submit" value="Submit">Submit</button>
         </form>
     </div>
     <div class="overall"></div>
@@ -30,58 +29,8 @@
         </div>
     </header>
     <div class="main-container">
-        <main>
-            <div class="container-piece">
-                <p>Book</p>
-                <p>amir heydari</p>
-                <p>333</p>
-                <button>read</button>
-            </div>
-            <div class="container-piece">
-                <p>Book</p>
-                <p>amir heydari</p>
-                <p>333</p>
-                <button>read</button>
-            </div>
-            <div class="container-piece">
-                <p>Book</p>
-                <p>amir heydari</p>
-                <p>333</p>
-                <button>read</button>
-            </div>
-            <div class="container-piece">
-                <p>Book</p>
-                <p>amir heydari</p>
-                <p>333</p>
-                <button>read</button>
-            </div>
-            <div class="container-piece">
-                <p>Book</p>
-                <p>amir heydari</p>
-                <p>333</p>
-                <button>read</button>
-            </div>
-            <div class="container-piece">
-                <p>Book</p>
-                <p>amir heydari</p>
-                <p>333</p>
-                <button>read</button>
-            </div>
-
-            <div class="container-piece">
-                <p>Book</p>
-                <p>amir heydari</p>
-                <p>333</p>
-                <button>read</button>
-            </div>
-            <div class="container-piece">
-                <p>Book</p>
-                <p>amir heydari</p>
-                <p>333</p>
-                <button>read</button>
-            </div>
-        </main>
+        <main class="main"></main>
     </div>
-    
+    <script src="app.js"></script>
 </body>
 </html>
