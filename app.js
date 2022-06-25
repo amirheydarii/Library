@@ -1,5 +1,6 @@
 "use strict";
 
+//show and close form
 function showForm(body, formContainer, form, overall) {
   body.style.overflow = "hidden";
   formContainer.style.display = "flex";
@@ -14,6 +15,8 @@ function closeform(body, formContainer, form, overall) {
   overall.style.display = "none";
 }
 
+
+//object constructor
 function Book(title, author, page, read) {
   this.title = title;
   this.author = author;
@@ -21,6 +24,7 @@ function Book(title, author, page, read) {
   this.read = read;
 }
 
+// store information in array
 let library = [];
 let newbook;
 
@@ -32,6 +36,7 @@ function addBookToLibrary() {
   form.reset();
 }
 
+// set style for book objects
 function setStyle(book) {
   let main = document.querySelector(".main");
   let div = document.createElement("div");
@@ -51,6 +56,7 @@ function setStyle(book) {
   page.textContent = `${book.page}`;
   div.appendChild(page);
 
+  // read button 
   let read = document.createElement("button");
   read.classList.add("readbutton");
   if (book.read == true) {
@@ -69,6 +75,7 @@ function setStyle(book) {
     render();
   });
 
+  // remove button
   let remove = document.createElement("button");
   remove.classList.add("remove-button");
   remove.textContent = "remove";
@@ -81,6 +88,7 @@ function setStyle(book) {
   });
 }
 
+// render style for each object
 function render() {
   let books = document.querySelectorAll(".container-piece");
   books.forEach((book) => main.removeChild(book));
@@ -90,10 +98,12 @@ function render() {
   }
 }
 
+// set data in localStorage
 function setData() {
   localStorage.setItem("mylibrary", JSON.stringify(library));
 }
 
+// restore data from localStorage
 function restoreData() {
   if (!localStorage.mylibrary) {
     render();
@@ -106,6 +116,7 @@ function restoreData() {
 
 restoreData();
 
+// Elements
 const body = document.querySelector(".body");
 const formContainer = document.querySelector(".container-form");
 const form = document.querySelector(".form");
@@ -119,6 +130,7 @@ const overall = document.querySelector(".overall");
 const main = document.querySelector(".main");
 const add = document.querySelector(".add");
 
+// event listener
 add.addEventListener("click", () => {
   showForm(body, formContainer, form, overall);
 });
