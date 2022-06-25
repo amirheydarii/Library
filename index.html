@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/style/style.css">
-</head>
-<body class="body">
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body class="body">
     <div class="container-form">
-        <form class="form" action="/" method="get">
-            <p class="head">Add new book</p>
-             <input type="text" name="book-title" placeholder="title"  class="title" required>
-             <input type="text" name="book-author" class="author"  placeholder="author" required>
-             <input type="number" name="book-page" class="page"  placeholder="page" required>
-             <div>
-                <p>Have you read it?</p>
-                <input class="checkbox" type="checkbox" name="checkbox" id="checkbox" >
-             </div>
-             <button class="submit" type="submit" value="Submit">Submit</button>
-        </form>
+      <form class="form" action="/" method="get">
+        <p class="head">Add new book</p>
+        <input
+          type="text"
+          name="book-title"
+          placeholder="title"
+          class="title"
+          required
+        />
+        <input
+          type="text"
+          name="book-author"
+          class="author"
+          placeholder="author"
+          required
+        />
+        <input
+          type="number"
+          name="book-page"
+          class="page"
+          placeholder="page"
+          required
+        />
+        <div>
+          <p>Have you read it?</p>
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="checkbox"
+            id="checkbox"
+          />
+        </div>
+        <button class="submit" type="submit" value="Submit">Submit</button>
+      </form>
     </div>
     <div class="overall"></div>
     <header>
-        <div class="container-header">
-            <h1>Library</h1>
-            <button class="add">+ add</button>
-        </div>
+      <div class="container-header">
+        <h1>Library</h1>
+        <button class="add">+ add</button>
+      </div>
     </header>
     <div class="main-container">
-        <main class="main"></main>
+      <main class="main"></main>
     </div>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

@@ -1,5 +1,5 @@
 @import "color";
-@import 'font';
+@import "font";
 
 body {
   background-color: $color-gray-weight;
@@ -11,12 +11,12 @@ body {
     display: flex;
     justify-content: center;
     .container-header {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width: 1500px;
-        padding: 4em 0em;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      width: 1500px;
+      padding: 4em 0em;
       h1 {
         margin: 0;
         font-family: $font-family-oxygen;
@@ -34,11 +34,12 @@ body {
         font-family: $font-family-oxygen;
         font-weight: $size-font-bold;
         font-size: 1.5rem;
-        &:hover,:focus {
+        &:hover,
+        :focus {
           cursor: pointer;
           box-shadow: -3px -3px 10px $color-red-shadow,
-           3px 3px 10px $color-red-shadow;
-         transform:scale(1.1);
+            3px 3px 10px $color-red-shadow;
+          transform: scale(1.1);
         }
       }
     }
@@ -50,12 +51,12 @@ body {
     main {
       width: 1400px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(18em , 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
       row-gap: 2em;
       justify-items: center;
       padding: 3em 0em;
       box-sizing: border-box;
-      .container-piece{
+      .container-piece {
         width: fit-content;
         background-color: $color-gray-light;
         display: flex;
@@ -65,8 +66,8 @@ body {
         padding: 2em 3em;
         border-radius: 2.2em;
         box-shadow: -5px -5px 13px $color-gray-shadow,
-         5px 5px 13px $color-gray-shadow;
-        p{
+          5px 5px 13px $color-gray-shadow;
+        p {
           margin: 0;
           font-family: $font-family-oxygen;
           font-weight: $size-font-regular;
@@ -81,28 +82,29 @@ body {
           margin-top: 1em;
           background-color: $color-gray-positive-button;
           color: $color-gray-text-button;
-          &:hover,:focus {
+          &:hover,
+          :focus {
             cursor: pointer;
             box-shadow: -2px -2px 5px $color-purple-shadow,
-             2px 2px 5px $color-purple-shadow;
-           transform:scale(1.1);
+              2px 2px 5px $color-purple-shadow;
+            transform: scale(1.1);
           }
         }
         .remove-button {
           font-size: 1.2em;
           margin-top: 0;
           background-color: $color-gray-x-weight;
-          &:hover,:focus {
+          &:hover,
+          :focus {
             cursor: pointer;
             box-shadow: -2px -2px 5px $color-blue-shadow,
-             2px 2px 5px $color-blue-shadow;
-             transform:scale(1.1);
+              2px 2px 5px $color-blue-shadow;
+            transform: scale(1.1);
           }
         }
       }
     }
   }
-
 
   .container-form {
     display: none;
@@ -123,13 +125,13 @@ body {
       width: min(90%, 400px);
       border-radius: 2em;
       // transform: translate(-50%, -50%) scale(0);
-      // transition: 200ms ease-in-out; 
+      // transition: 200ms ease-in-out;
       div {
         display: flex;
         width: 100%;
         justify-content: space-around;
         align-items: center;
-        p{
+        p {
           margin: 0;
         }
         .checkbox {
@@ -138,7 +140,7 @@ body {
         }
       }
 
-      p{
+      p {
         margin: 0;
         font-family: $font-family-oxygen;
         color: $color-gray-xx-weight;
@@ -157,14 +159,15 @@ body {
         background-color: $color-gray-x-weight;
         border-radius: 0.4em;
         color: $color-gray-xx-weight;
-        &:hover,:focus {
+        &:hover,
+        :focus {
           cursor: pointer;
           box-shadow: -2px -2px 5px $color-green-shadow,
-           2px 2px 5px $color-green-shadow;
-         transform:scale(1.1);
+            2px 2px 5px $color-green-shadow;
+          transform: scale(1.1);
         }
       }
-      input{
+      input {
         width: min(80%, 300px);
         border: none;
         border-radius: 0.5em;
@@ -183,6 +186,6 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color:rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.15);
   }
 }
